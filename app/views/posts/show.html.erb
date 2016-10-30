@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+
+<p class="date">
+Submited <%= time_ago_in_words(@post.created_at) %> ago
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @post.body %>
+</p>
+<br>
+
+<%= link_to 'Back', {:action => 'index'} %> |
+<%= link_to 'Edit', {:action => 'edit', :id => @post.id} %> |
+<%= link_to 'Destroy', {:action => 'destroy', :id => @post.id}, data: { confirm: 'Are you sure?' } %>
+
+

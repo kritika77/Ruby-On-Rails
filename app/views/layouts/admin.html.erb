@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ITU Academia | <%= @page_title || "Admin" %></title>
+    <%= stylesheet_link_tag('application', :media => 'all') %>
+    <link href='http://fonts.googleapis.com/css?family=Cagliostro' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+  <div id="container">
+  <div id="header">
+    <h1>ITU Academia</h1>
+    <div class="HorizLinks">
+    <ul>
+      <li><%= link_to("Sign In", {:controller => 'access', :action => 'index'}, :class => 'back-link2') %></li>
+      <li><%= link_to("Logout", {:controller => 'access', :action => 'logout'}) %></li>
+    </ul>
+    </div>
+   </div>
+   
+  <div id="horizontalnav">
+  <div class="navlinks">
+   <ul>
+     <li><%= link_to("Home", {:controller => 'public', :action => 'index'}, :class => 'back-link') %></li>
+     <li><%= link_to("Subjects", :controller => 'subjects') %></li>
+      <li><%= link_to("Binary to Decimal Converter", {:controller => 'converter', :action => 'decimal'}, :class => 'back-link2') %></li>
+      <li><%= link_to("Admin", {:controller => 'access', :action => 'index'}, :class => 'back-link2') %></li>
+      <li><%= link_to("Blog", {:controller => 'posts', :action => 'index'}, :class => 'back-link2') %></li>
+      <li><%= link_to("Contact Us", {:controller => 'contact_us', :action => 'contact'}, :class => 'back-link2') %></li>
+   </ul>
+  </div>
+  </div>
+
+  <div id="main">
+    <div class="box">
+    <% if !flash[:notice].blank? %>
+      <div class="notice">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+     <div id="content">
+       <%= yield %>
+     </div>
+   </div>
+  </div>
+  
+  <div id="footer">
+   <div class="footerlinks">
+    <p id="copyright">Copyright © 2016 ITU Academia </p>
+   </div>
+  </div>
+
+   </body>
+</html>

@@ -1,0 +1,15 @@
+<%= link_to 'Back', {:action => 'index'} %>
+
+<div class="posts edit">
+<h1>Editing Post</h1>
+
+ <%= form_for(:post, :url => {:action => 'update', :id => @post.id}) do |f| %>
+
+ <%= render(:partial => "form", :locals => {:f => f}) %>
+
+<div class="form-buttons">
+      <%= submit_tag("Update Post") %>
+    </div>
+
+ <% end %>
+ </div>

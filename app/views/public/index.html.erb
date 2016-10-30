@@ -1,0 +1,44 @@
+<h2>Welcome to the ITU Academia</h2>
+<br>
+
+<!--<div class="grids_1_of_4">
+        <div class="grid_1_of_4 images_1_of_4 bg1">
+           <img src="/assets/icon1.png">
+           <h3>Experience Yourself</h3>
+        </div>
+        <div class="grid_1_of_4 images_1_of_4 bg2">
+           <img src="/assets/icon2.png">
+           <h3>Classroom and Online learning</h3>
+        </div>
+        <div class="grid_1_of_4 images_1_of_4 bg3 hide">
+           <img src="/assets/icon3.png">
+           <h3>Research and Collaboration</h3>
+        </div>
+        <div class="grid_1_of_4 images_1_of_4 bg4 hide">
+           <img src="/assets/icon4.png">
+           <h3>News and Events</h3>
+        </div>
+      <div class="clear"></div>
+   </div>-->
+
+<!--<p>I am developing this website as a part of my course.
+This is my first Ruby on Rails application! </p>
+<p> You can find blogs of your favourite programming language here.</p>-->
+
+<div class="grids_1_of_4">
+    <div class="grid_1_of_4 images_1_of_4 bg1">
+     <%= link_to(image_tag("/assets/icon1.png"), {:controller => 'public', :action => 'index'}, :class => 'back-link') %>
+     </div>
+     <div class="grid_1_of_4 images_1_of_4 bg2">
+     <%= link_to(image_tag("/assets/icon2.png"), :controller => 'subjects') %>
+     </div>
+     <div class="grid_1_of_4 images_1_of_4 bg3 hide">
+      <%= link_to(image_tag("/assets/icon3.png"), {:controller => 'access', :action => 'index'}, :class => 'back-link2') %>
+      </div>
+      <div class="grid_1_of_4 images_1_of_4 bg4 hide">
+      <%= link_to(image_tag("/assets/icon4.png"), {:controller => 'contact_us', :action => 'contact'}, :class => 'back-link2') %>
+      </div>
+      <div class="clear"></div>
+   </div>
+
+   

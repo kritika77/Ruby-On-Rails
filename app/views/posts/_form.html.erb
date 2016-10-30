@@ -1,0 +1,14 @@
+
+  <%= error_messages_for(@post) %>
+ 
+   <table summary="Post form fields">
+      <tr>
+       <th><%= f.label :title %></th>
+       <td><%= f.text_field :title %></td>
+     </tr>
+     <tr>
+       <th><%= f.label :body %></th>
+       <td><%= f.text_area :body %></td>
+     </tr>
+     </table>
+

@@ -1,0 +1,10 @@
+<%target_point = "World"%>
+<p>Hello <%=target_point%></p>
+
+<h1>Hi, <%=@name%></h1>
+<p>Time now is <%=formatted_time(@time)%></p>
+<p>Displayed <%=@times_displayed%> times</p>
+
+<% @array.each do |n| %>
+  <li><%= n %></li>
+<% end %>

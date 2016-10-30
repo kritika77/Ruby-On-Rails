@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Posts</h1>
+<div class="Posts index">
+<table class="listing" summary="Post list">
+    <tr class="header">
+      <th>Title</th>
+      <th>Body</th>
+      <th>Actions</th>
+    </tr>
+    <% @posts.each do |post| %>
+      <tr class="<%= cycle('odd', 'even') %>">
+        <td class="center"><%= post.title %></td>
+        <td class="center"><%= post.body %></td>
+        <td class="actions"><%= link_to 'Show', {:action => 'show', :id => post.id} %>
+        <%= link_to 'Edit', {:action => 'edit', :id => post.id} %>
+        <%= link_to 'Destroy', {:action => 'destroy', :id => post.id}, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+</table>
+</div>
+
+
+<%= link_to("New Post", {:action => 'new'}, :class => 'action new') %>
